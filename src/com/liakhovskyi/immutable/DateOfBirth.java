@@ -1,4 +1,4 @@
-package com.liakhovskyi;
+package com.liakhovskyi.immutable;
 
 public class DateOfBirth {
 

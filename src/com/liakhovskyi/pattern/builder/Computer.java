@@ -1,4 +1,4 @@
-package com.liakhovskyi;
+package com.liakhovskyi.pattern.builder;
 
 public class Computer {
 
@@ -47,7 +47,7 @@ public class Computer {
         return storageCapacity;
     }
 
-    public static class Builder {
+    public static class ComputerBuilder {
 
         private String processor;
         private String graphicCard;
@@ -56,32 +56,32 @@ public class Computer {
         private int ram;
         private int storageCapacity;
 
-        public Builder setProcessor(String processor) {
+        public ComputerBuilder setProcessor(String processor) {
             this.processor = processor;
             return this;
         }
 
-        public Builder setGraphicCard(String graphicCard) {
+        public ComputerBuilder setGraphicCard(String graphicCard) {
             this.graphicCard = graphicCard;
             return this;
         }
 
-        public Builder setMotherboard(String motherboard) {
+        public ComputerBuilder setMotherboard(String motherboard) {
             this.motherboard = motherboard;
             return this;
         }
 
-        public Builder setNumberOfCoolers(int numberOfCoolers) {
+        public ComputerBuilder setNumberOfCoolers(int numberOfCoolers) {
             this.numberOfCoolers = numberOfCoolers;
             return this;
         }
 
-        public Builder setRam(int ram) {
+        public ComputerBuilder setRam(int ram) {
             this.ram = ram;
             return this;
         }
 
-        public Builder setStorageCapacity(int storageCapacity) {
+        public ComputerBuilder setStorageCapacity(int storageCapacity) {
             this.storageCapacity = storageCapacity;
             return this;
         }
