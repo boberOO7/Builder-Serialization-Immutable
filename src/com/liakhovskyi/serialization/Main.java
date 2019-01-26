@@ -26,5 +26,6 @@ public class Main {
         mainGroup.addGroup(thirdGroup);
 
         System.out.println(convertToJson(mainGroup));
+        System.out.println(convertToXml(mainGroup));
     }
 }
