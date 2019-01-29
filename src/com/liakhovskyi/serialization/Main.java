@@ -1,9 +1,12 @@
 package com.liakhovskyi.serialization;
 
-import static com.liakhovskyi.serialization.Converting.*;
+import static com.liakhovskyi.serialization.JsonConveringV2.convert;
+import static com.liakhovskyi.serialization.JsonConverting.convertToJson;
+import static com.liakhovskyi.serialization.XmlConverting.convertToXml;
+
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IllegalAccessException {
         Group mainGroup = new Group();
         Group firstGroup = new Group();
         Group secondGroup = new Group();
@@ -27,5 +30,6 @@ public class Main {
 
         System.out.println(convertToJson(mainGroup));
         System.out.println(convertToXml(mainGroup));
+        System.out.println(convert(mainGroup));
     }
 }

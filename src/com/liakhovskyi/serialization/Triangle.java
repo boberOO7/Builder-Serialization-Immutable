@@ -2,10 +2,10 @@ package com.liakhovskyi.serialization;
 
 public class Triangle implements Figure {
 
-    private final int NUMBER_OF_SIDES = 3;
+    private final int numberOfSide = 3;
     private float lengthOfSide;
     private String color;
-    private final String NAME = "Triangle";
+    private final String name = "Triangle";
 
     public Triangle(float lengthOfSide, String color) {
         this.lengthOfSide = lengthOfSide;
@@ -13,8 +13,8 @@ public class Triangle implements Figure {
     }
 
     @Override
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
     public float getLengthOfSide() {
@@ -25,8 +25,8 @@ public class Triangle implements Figure {
         this.lengthOfSide = lengthOfSide;
     }
 
-    public int getNUMBER_OF_SIDES() {
-        return NUMBER_OF_SIDES;
+    public int getNumberOfSide() {
+        return numberOfSide;
     }
 
     public String getColor() {
@@ -39,11 +39,31 @@ public class Triangle implements Figure {
 
     @Override
     public float calculatePerimeter() {
-        return lengthOfSide * NUMBER_OF_SIDES;
+        return lengthOfSide * numberOfSide;
     }
 
     @Override
     public float calculateArea() {
         return (float)((Math.pow(lengthOfSide, 2) * Math.sqrt(3)) / 4);
+    }
+
+    @Override
+    public String getPerimeterJson() {
+        return "\"perimeter\": \"" + calculatePerimeter() + "\",\n";
+    }
+
+    @Override
+    public String getAreaJson() {
+        return "\"area\": \"" + calculateArea() + "\"\n";
+    }
+
+    @Override
+    public String getPerimeterXml() {
+        return "<perimeter>" + calculatePerimeter() + "</perimeter>\n";
+    }
+
+    @Override
+    public String getAreaXml() {
+        return "<area>" + calculateArea() + "</area>\n";
     }
 }

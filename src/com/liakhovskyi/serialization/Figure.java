@@ -4,5 +4,9 @@ public interface Figure {
 
     float calculatePerimeter();
     float calculateArea();
-    String getNAME();
+    String getName();
+    String getPerimeterXml();
+    String getPerimeterJson();
+    String getAreaXml();
+    String getAreaJson();
  }
