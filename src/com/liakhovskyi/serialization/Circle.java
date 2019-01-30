@@ -4,15 +4,15 @@ public class Circle implements Figure {
 
     private float radius;
     private String color;
-    private final String NAME = "Circle";
+    private final String name = "Circle";
 
     public Circle(float radius, String color) {
         this.radius = radius;
         this.color = color;
     }
 
-    public String getNAME() {
-        return NAME;
+    public String getName() {
+        return name;
     }
 
     public float getRadius() {
@@ -33,11 +33,31 @@ public class Circle implements Figure {
 
     @Override
     public float calculatePerimeter() {
-        return 2 * 3.14f * radius;
+        return (float)(2 * Math.PI * radius);
     }
 
     @Override
     public float calculateArea() {
-        return (float)(3.14f * Math.pow(radius,2));
+        return (float)(Math.PI * Math.pow(radius,2));
+    }
+
+    @Override
+    public String getPerimeterJson() {
+        return "\"circumference\": \"" + calculatePerimeter() + "\",\n";
+    }
+
+    @Override
+    public String getAreaJson() {
+        return "\"area\": \"" + calculateArea() + "\"\n";
+    }
+
+    @Override
+    public String getPerimeterXml() {
+        return "<circumference>" + calculatePerimeter() + "</circumference>\n";
+    }
+
+    @Override
+    public String getAreaXml() {
+        return "<area>" + calculateArea() + "</area>\n";
     }
 }

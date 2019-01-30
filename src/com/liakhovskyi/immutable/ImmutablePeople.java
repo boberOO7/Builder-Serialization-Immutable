@@ -8,7 +8,6 @@ public final class ImmutablePeople {
     private final int height;
     private final DateOfBirth dateOfBirth;
 
-
     public ImmutablePeople(String lastName, String firstName, int weight, int height, DateOfBirth dateOfBirth) {
         this.firstName = firstName;
         this.lastName = lastName;

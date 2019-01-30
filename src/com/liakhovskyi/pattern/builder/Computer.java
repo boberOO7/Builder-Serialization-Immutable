@@ -1,7 +1,6 @@
 package com.liakhovskyi.pattern.builder;
 
 public class Computer {
-
     private String processor;
     private String graphicCard;
     private String motherboard;
@@ -9,7 +8,7 @@ public class Computer {
     private int ram;
     private int storageCapacity;
 
-    public Computer(String processor
+    private Computer(String processor
             , String graphicCard
             , String motherboard
             , int numberOfCoolers
@@ -48,7 +47,6 @@ public class Computer {
     }
 
     public static class ComputerBuilder {
-
         private String processor;
         private String graphicCard;
         private String motherboard;
