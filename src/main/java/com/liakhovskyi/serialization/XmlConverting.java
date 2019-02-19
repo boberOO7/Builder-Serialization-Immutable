@@ -2,7 +2,7 @@ package com.liakhovskyi.serialization;
 
 public class XmlConverting {
 
-    public static StringBuilder convertToXml(Group group) {
+    public static String convertToXml(Group group) {
         StringBuilder resultXml = new StringBuilder();
         resultXml.append("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n");
         resultXml.append("<group>\n");
@@ -32,7 +32,7 @@ public class XmlConverting {
         }
         resultXml.append("</group>");
 
-        return resultXml;
+        return resultXml.toString();
     }
 
     private static void addTabs(int tabs, StringBuilder builder) {

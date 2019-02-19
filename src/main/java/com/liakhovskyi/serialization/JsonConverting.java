@@ -2,7 +2,7 @@ package com.liakhovskyi.serialization;
 
 public class JsonConverting {
 
-    public static StringBuilder convertToJson(Group group) {
+    public static String convertToJson(Group group) {
         StringBuilder resultJson = new StringBuilder();
 
         resultJson.append("{\n");
@@ -33,7 +33,8 @@ public class JsonConverting {
                 addTabs(4, resultJson);
                 resultJson.append("},");
             }
-            resultJson.append("\b\n");
+            resultJson.deleteCharAt(resultJson.length() - 1);
+            resultJson.append("\n");
             addTabs(3, resultJson);
             resultJson.append("]");
 
@@ -41,12 +42,13 @@ public class JsonConverting {
             addTabs(2, resultJson);
             resultJson.append("},");
         }
-        resultJson.append("\b\n");
+        resultJson.deleteCharAt(resultJson.length() - 1);
+        resultJson.append("\n");
         addTabs(1, resultJson);
         resultJson.append("]");
         resultJson.append("\n}");
 
-        return resultJson;
+        return resultJson.toString();
     }
 
     private static void addTabs(int tabs, StringBuilder builder) {
