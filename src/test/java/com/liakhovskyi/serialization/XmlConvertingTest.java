@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static com.liakhovskyi.serialization.XmlConverting.convertToXml;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class XmlConvertingTest {
     Group mainGroup = new Group();
@@ -84,5 +84,4 @@ public class XmlConvertingTest {
         String actualResult = convertToXml(mainGroup);
         assertEquals(expectedResult, actualResult);
     }
-
 }
